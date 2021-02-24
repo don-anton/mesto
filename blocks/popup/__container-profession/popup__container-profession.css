@@ -1,0 +1,20 @@
+.popup__container-profession {
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 36px;
+    padding-bottom: 13px;
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    width: 358px;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__container-profession {
+        width: 238px;
+        margin-left: 22px;
+    }
+}
