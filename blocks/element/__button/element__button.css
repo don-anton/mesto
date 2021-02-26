@@ -5,6 +5,11 @@
     grid-column: 2/3;
     justify-self: end;
     align-self: center;
+    background-image: url(../../../images/Like-button.svg);
+    width: 22px;
+    height: 19px;
+    background-color: white;
+    border: none;
 }
 
 .element__button:hover {
@@ -12,5 +17,8 @@
 }
 
 .element__button:active {
-    color: black;
+    background-image: url(../../../images/Like-button-Active.svg);
+    width: 22px;
+    height: 19px;
+    border: none;
 }

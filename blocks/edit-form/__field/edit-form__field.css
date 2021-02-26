@@ -1,7 +1,7 @@
-.popup__container-profession {
+.edit-form__field {
     margin: 0;
-    margin-top: 30px;
     margin-left: 36px;
+    margin-bottom: 30px;
     padding-bottom: 13px;
     color: black;
     font-weight: normal;
@@ -12,8 +12,12 @@
     width: 358px;
 }
 
+.edit-form__field:last-of-type {
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 600px) {
-    .popup__container-profession {
+    .edit-form__field {
         width: 238px;
         margin-left: 22px;
     }

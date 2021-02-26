@@ -5,21 +5,22 @@
     width: 150px;
     height: 50px;
     transition: 0.5s;
+    background-image: url(../../../images/Add-button.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
     background-color: black;
     color: white;
-    border: solid 1px white;
+    border: solid 2px white;
 }
 
 .profile__add-button:hover {
-    opacity: .5;
+    opacity: .6;
 }
 
 @media screen and (max-width: 640px) {
     .profile__add-button {
         margin-top: 36px;
         width: 282px;
-        height: 50px;
-        margin-left: auto;
         margin-right: auto;
         position: inherit;    
     }

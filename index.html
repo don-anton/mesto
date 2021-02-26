@@ -9,64 +9,66 @@
 <body>
     <div class="root">
         <header class="header">
-            <img class="header__logo" src="images/header_logo.png" alt="img: Логотип">
+            <img class="header__logo" src="images/header_logo.svg" alt="img: Логотип">
         </header>
         <main class="content">
             <section class="profile">
-                <img class="avatar" src="images/kusto.png" alt="img:Портрет Кусто">
+                <img class="profile__avatar" src="images/kusto.png" alt="img:Портрет Кусто">
                 <div class="profile-info">
                     <h1 class="profile-info__name">Жак-Ив Кусто</h1>
-                    <img class="profile-info__edit-button" src="images/Edit-Button.png" alt="img:Кнопка редактирования">
+                    <button class="profile-info__edit-button" type="button"></button>
                     <p class="profile-info__profession">Исследователь океана</p>
                 </div>
-                <button class="profile__add-button">+</button>
+                <button class="profile__add-button" type="button"></button>
             </section>
             <section class="elements">
                 <div class="element">
                     <img class="element__image" src="images/Iceland.jpg" alt="img:Исландия">
-                    <p class="element__name">Исландия</p>
-                    <img class="element__button" src="images/Like-button.png" alt="img:Кнопка лайк">
+                    <h2 class="element__name">Исландия</h2>
+                    <button class="element__button" type="button"></button>
                 </div>
                 <div class="element">
                     <img class="element__image" src="images/Elbrus.jpg" alt="img:Эльбрус">
-                    <p class="element__name">Эльбрус</p>
-                    <img class="element__button" src="images/Like-button.png" alt="img:Кнопка лайк">
+                    <h2 class="element__name">Эльбрус</h2>
+                    <button class="element__button" type="button"></button>
                 </div>
                 <div class="element">
                     <img class="element__image" src="images/Bali.jpg" alt="img:Бали">
-                    <p class="element__name">Бали</p>
-                    <img class="element__button" src="images/Like-button.png" alt="img:Кнопка лайк">
+                    <h2 class="element__name">Бали</h2>
+                    <button class="element__button" type="button"></button>
                 </div>
                 <div class="element">
                     <img class="element__image" src="images/Greece.jpg" alt="img:Греция">
-                    <p class="element__name">Греция</p>
-                    <img class="element__button" src="images/Like-button.png" alt="img:Кнопка лайк">
+                    <h2 class="element__name">Греция</h2>
+                    <button class="element__button" type="button"></button>
                 </div>
                 <div class="element">
                     <img class="element__image" src="images/Mexico.jpg" alt="img:Мехико">
-                    <p class="element__name">Мехико</p>
-                    <img class="element__button" src="images/Like-button.png" alt="img:Кнопка лайк">
+                    <h2 class="element__name">Мехико</h2>
+                    <button class="element__button" type="button"></button>
                 </div>
                 <div class="element">
                     <img class="element__image" src="images/Los-Angeles.jpg" alt="img:Лос-Анджелес">
-                    <p class="element__name">Лос-Анджелес</p>
-                    <img class="element__button" src="images/Like-button.png" alt="img:Кнопка лайк">
+                    <h2 class="element__name">Лос-Анджелес</h2>
+                    <button class="element__button" type="button"></button>
                 </div>
-            </section>
-            <section class="popup">
-                <form class="popup__container">
-                    <img class="popup__close-icon" src="images/Close-Icon.png" alt="img:Кнопка Закрыть">
-                    <h2 class="popup__container-title">Редактировать профиль</h2>
-                    <input type="text" class="popup__container-name">
-                    <input type="text" class="popup__container-profession">
-                    <button class="popup__container-button" type="submit">Сохранить</button>
-                </form>
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
         </footer>
+        <section class="popup">
+            <div class="popup__container">
+                <h2 class="popup__container-title">Редактировать профиль</h2>
+            <form class="edit-form" name="edit-form">
+                <input type="text" class="edit-form__field" name="name">
+                <input type="text" class="edit-form__field" name="profession">
+                <button class="popup__container-button" type="submit">Сохранить</button>
+            </form>
+                <button class="popup__close-icon" type="reset"></button>
+            </div>
+        </section>
     </div>
-    <script src="script/script.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
