@@ -18,7 +18,4 @@
 
 .element__button:active {
     background-image: url(../../../images/Like-button-Active.svg);
-    width: 22px;
-    height: 19px;
-    border: none;
 }
