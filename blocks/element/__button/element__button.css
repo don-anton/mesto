@@ -16,6 +16,3 @@
     opacity: .5;
 }
 
-.element__button:active {
-    background-image: url(../../../images/Like-button-Active.svg);
-}
