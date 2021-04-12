@@ -106,7 +106,7 @@ addCardCloseButton.addEventListener('click', closeAddCardWindow);
 
     
     
-    elementCards.append(cardTemplate)  
+    elementCards.prepend(cardTemplate)  
 
     
     closeAddCardWindow();
