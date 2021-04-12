@@ -1,4 +1,4 @@
-.figure__image_close {
+.figure__image-close {
     margin: 0;
     transition: 0.5s;
     width: 40px;
@@ -6,19 +6,19 @@
     position: absolute;
     top: -40px;
     right: -40px;
-    background-image: url(../../../../images/Close-Icon.svg);
+    background-image: url(../../../images/Close-Icon.svg);
     background-color: transparent;
     background-position: 50%;
     border: none;
     z-index: 20;
 }
 
-.figure__image_close:hover {
+.figure__image-close:hover {
     opacity: .6;
 }
 
 @media screen and (max-width: 600px) {
-    .figure__image_close {
+    .figure__image-close {
         width: 26px;
         height: 26px;
         

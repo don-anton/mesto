@@ -30,6 +30,6 @@
 @import url(../blocks/edit-form/__field/edit-form__field.css);
 @import url(../blocks/figure/figure.css);
 @import url(../blocks/figure/__image/figure__image.css);
-@import url(../blocks/figure/__image/_description/figure__image_description.css);
-@import url(../blocks/figure/__image/_close/figure__image_close.css);
+@import url(../blocks/figure/__image-description/figure__image-description.css);
+@import url(../blocks/figure/__image-close/figure__image-close.css);
 

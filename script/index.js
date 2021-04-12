@@ -148,8 +148,8 @@ newCardForm.addEventListener('submit', addNewCard);
     let elementImage = cardTemplate.querySelector('.element__image');
     let elementName = cardTemplate.querySelector('.element__name');
     let image = popupImage.querySelector('.figure__image');
-    let imageDescription = popupImage.querySelector('.figure__image_description');
-    let imageClose = popupImage.querySelector('.figure__image_close');
+    let imageDescription = popupImage.querySelector('.figure__image-description');
+    let imageClose = popupImage.querySelector('.figure__image-close');
     
     function openPopupImage () { 
       popupImage.classList.add('popup_opened')
