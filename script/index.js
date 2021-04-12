@@ -147,9 +147,9 @@ newCardForm.addEventListener('submit', addNewCard);
     let popupImage = document.querySelector('.popup-image-open'); //открытие картинок
     let elementImage = cardTemplate.querySelector('.element__image');
     let elementName = cardTemplate.querySelector('.element__name');
-    let image = popupImage.querySelector('.popup__image');
-    let imageDescription = popupImage.querySelector('.popup__image_description');
-    let imageClose = popupImage.querySelector('.popup__image_close');
+    let image = popupImage.querySelector('.figure__image');
+    let imageDescription = popupImage.querySelector('.figure__image_description');
+    let imageClose = popupImage.querySelector('.figure__image_close');
     
     function openPopupImage () { 
       popupImage.classList.add('popup_opened')
@@ -174,20 +174,6 @@ newCardForm.addEventListener('submit', addNewCard);
   let startCards = initialCards.forEach (function startCardsAdd (item) { // создание карточек из массива
     cardGenerate(item)
   });
-
-
-
-
-// открытие попапа картинки 
-
-
-
-
-
-
-// лайк карточки 
-
-
 
 
 

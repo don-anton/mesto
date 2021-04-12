@@ -28,7 +28,8 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/edit-form/edit-form.css);
 @import url(../blocks/edit-form/__field/edit-form__field.css);
-@import url(../blocks/popup/__image/popup__image.css);
-@import url(../blocks/popup/__image/_description/popup__image_description.css);
-@import url(../blocks/popup/__image/_close/popup__image_close.css);
+@import url(../blocks/figure/figure.css);
 @import url(../blocks/figure/__image/figure__image.css);
+@import url(../blocks/figure/__image/_description/figure__image_description.css);
+@import url(../blocks/figure/__image/_close/figure__image_close.css);
+

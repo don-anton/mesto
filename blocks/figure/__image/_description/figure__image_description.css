@@ -1,4 +1,4 @@
-.popup__image_description {
+.figure__image_description {
     margin: 0;
     margin-top: 10px;
     color: white;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 880px) {
-    .popup__image_description {
+    .figure__image_description {
         width: 240px;
     }
 }
