@@ -83,35 +83,11 @@ function closeAddCardWindow () {
 addCardButton.addEventListener('click', openAddCardWindow);
 addCardCloseButton.addEventListener('click', closeAddCardWindow);
 
-  // создание карточек
   let startCardTemplate = document.querySelector('.template').content.querySelector('.element')
 
-  let newCardForm = addCardForm.querySelector('.new-card-form')
-  let newCardImageInput = addCardForm.querySelector("input[name='link']");
-  let newCardTitleInput = addCardForm.querySelector("input[name='title']")
+  
 
-  function addNewCard (e) {
-    e.preventDefault()
-    let inputTitle = newCardTitleInput.value
-    let inputImage = newCardImageInput.value
-    
-
-    let cardTemplate = startCardTemplate.cloneNode(true)
-    let startCardTitle = cardTemplate.querySelector('.element__name')
-    let startCardImage = cardTemplate.querySelector('.element__image')
-    startCardTitle.textContent = inputTitle;
-    startCardImage.src = inputImage;
-    startCardImage.alt = inputTitle;
-
-
-    
-    
-    elementCards.prepend(cardTemplate)  
-
-    
-    closeAddCardWindow();
-}
-newCardForm.addEventListener('submit', addNewCard);
+  
 
 
 
@@ -123,6 +99,10 @@ newCardForm.addEventListener('submit', addNewCard);
     startCardTitle.textContent = item.name;
     startCardImage.src = item.link;
     startCardImage.alt = item.name;
+
+
+
+    
 
     let deleteButton = cardTemplate.querySelector('.element__delete') //удаление карточки
 
@@ -166,10 +146,13 @@ newCardForm.addEventListener('submit', addNewCard);
   elementImage.addEventListener('click', openPopupImage);
   imageClose.addEventListener('click', closePopupImage);
   
+
     
     
     elementCards.append(cardTemplate)  
   }
+
+  
 
   let startCards = initialCards.forEach (function startCardsAdd (item) { // создание карточек из массива
     cardGenerate(item)
@@ -178,5 +161,79 @@ newCardForm.addEventListener('submit', addNewCard);
 
 
 
+  // добавление новой карточки
+
+  let newCardForm = addCardForm.querySelector('.new-card-form')
+  let newCardImageInput = addCardForm.querySelector("input[name='link']");
+  let newCardTitleInput = addCardForm.querySelector("input[name='title']")
+
+  function addNewCard (evt) { 
+    evt.preventDefault()
+    let inputTitle = newCardTitleInput.value
+    let inputImage = newCardImageInput.value
+    
+    let cardTemplate = startCardTemplate.cloneNode(true)
+    let startCardTitle = cardTemplate.querySelector('.element__name')
+    let startCardImage = cardTemplate.querySelector('.element__image')
+    
+    startCardTitle.textContent = inputTitle;
+    startCardImage.src = inputImage;
+    startCardImage.alt = inputTitle;
+
+    
+    
+    
+
+    
+    let deleteButton = cardTemplate.querySelector('.element__delete') //удаление карточки
+
+    function deleteCard () {
+      cardTemplate.remove()
+    }
+
+    deleteButton.addEventListener('click', deleteCard)
+
+
+    let likeButton = cardTemplate.querySelector('.element__button'); // лайк
+
+    function like () {
+      likeButton.classList.toggle('element__button_active')
+    } 
+
+    likeButton.addEventListener('click', like);
+    
+
+
+
+    let popupImage = document.querySelector('.popup-image-open'); //открытие картинок
+    let elementImage = cardTemplate.querySelector('.element__image');
+    let elementName = cardTemplate.querySelector('.element__name');
+    let image = popupImage.querySelector('.figure__image');
+    let imageDescription = popupImage.querySelector('.figure__image-description');
+    let imageClose = popupImage.querySelector('.figure__image-close');
+    
+    function openPopupImage () { 
+      popupImage.classList.add('popup_opened')
+      image.src = elementImage.src
+      image.alt = elementName.textContent
+      imageDescription.textContent = elementName.textContent
+  
+  }
+  
+  function closePopupImage () {
+      popupImage.classList.remove('popup_opened')
+  }
+  
+  elementImage.addEventListener('click', openPopupImage);
+  imageClose.addEventListener('click', closePopupImage);
   
 
+    
+    
+    elementCards.append(cardTemplate)  
+    elementCards.prepend(cardTemplate)  
+
+    
+    closeAddCardWindow();
+}
+newCardForm.addEventListener('submit', addNewCard);
